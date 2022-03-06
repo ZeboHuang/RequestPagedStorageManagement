@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/page_max_num_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="最大页面号"
+
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/request_page_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请求页面序列长度"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:rowCount="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/random_num_btn"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_marginEnd="5dp"
+            android:text="产生随机请求页面序列" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/show_line_chart_btn"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_row="0"
+            android:layout_gravity="fill"
+            android:layout_marginStart="5dp"
+            android:text="折线图" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/show_animate_btn"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_row="1"
+            android:layout_gravity="fill"
+            android:layout_marginStart="5dp"
+
+            android:text="演示动画" />
+    </GridLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:minHeight="100dp"
+        app:cardCornerRadius="20dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="随机数序列:" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/random_page_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="20dp"
+            android:textSize="20sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
